@@ -1,6 +1,14 @@
 const express = require('express');
 const swaggerSpec = require('./swaggerConfig');
 const swaggerUi = require('swagger-ui-express');
+const mongoose = require('mongoose');
+
+mongoose
+    .connect(
+        'mongodb+srv://rodionyermakovsd:!rOGER123@cluster0.lgqzxdc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    )
+    .then(() => console.log('DB ok'))
+    .catch((err) => console.log('DB error', err));
 
 const app = express();
 
