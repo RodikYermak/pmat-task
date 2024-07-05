@@ -4,7 +4,13 @@ const customers = {};
 
 const displayCustomerInfo = (req, res) => {
     const ContactInfo = require('../support/world');
-    const contactInfo = new ContactInfo('d290f1ee-6c54-4b01-90e6-d701748f0851', 'John', 'Doe', 'john.doe@gmmail.com');
+    const contactInfo = new ContactInfo(
+        'd290f1ee-6c54-4b01-90e6-d701748f0851',
+        'John',
+        'Doe',
+        'john.doe@gmmail.com'
+    );
+    // fdfs
     res.send(contactInfo);
 
     res.status(200);
