@@ -1,5 +1,5 @@
 const express = require('express');
-const swaggerSpec = require('./swaggerConfig');
+const swaggerSpec = require('./utils/swaggerConfig');
 const swaggerUi = require('swagger-ui-express');
 const mongoose = require('mongoose');
 const customerRoutes = require('./routes/customerRoutes');

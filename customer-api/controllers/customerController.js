@@ -3,12 +3,9 @@ const { v4: uuidv4 } = require('uuid');
 const customers = {};
 
 const displayCustomerInfo = (req, res) => {
-    res.send({
-        id: 'd290f1ee-6c54-4b01-90e6-d701748f0851',
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'john.doe@gmmail.com',
-    });
+    const ContactInfo = require('../support/world');
+    const contactInfo = new ContactInfo('d290f1ee-6c54-4b01-90e6-d701748f0851', 'John', 'Doe', 'john.doe@gmmail.com');
+    res.send(contactInfo);
 
     res.status(200);
 };
